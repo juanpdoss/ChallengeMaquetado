@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
-  countryOfIncorporation = '';
-  placeOfBusiness: string = '';
+  countryOfIncorporation: string = '';
+  otherBusinessName: string = '';
   fundInput: string = '';
-  binding: string = '';
-  errorMsg: string = '';
   legalEntityName = '';
   businessDescInput: string = '';
+  numberEmployees: string = '';
+  typeOfbusiness: string = '';
+  placeOfBusinessOperation: string = '';
 
   constructor() {}
 
