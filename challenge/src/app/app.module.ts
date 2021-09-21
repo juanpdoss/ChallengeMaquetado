@@ -8,9 +8,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { HeaderComponent } from './pages/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SignUpComponent, HeaderComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

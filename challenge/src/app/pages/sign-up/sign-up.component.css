@@ -1,0 +1,20 @@
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+
+button {
+  width: 80%;
+  height: 25%;
+}
+
+mat-form-field {
+  width: 80%;
+}
+
+hr {
+  width: 100%;
+}
