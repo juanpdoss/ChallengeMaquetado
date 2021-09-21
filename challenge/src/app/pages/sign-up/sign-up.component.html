@@ -293,7 +293,7 @@
   <br />
   <mat-form-field appearance="fill">
     <mat-label>none</mat-label>
-    <mat-select>
+    <mat-select required>
       <mat-option value="none">none</mat-option>
       <mat-option value="Afganistan">Afghanistan</mat-option>
       <mat-option value="Albania">Albania</mat-option>
@@ -588,12 +588,12 @@
   <h2>*Business Description</h2>
   <mat-form-field appearance="fill">
     <mat-label>Please describe your business </mat-label>
-    <input matInput required />
+    <input matInput required [(ngModel)]="businessDescInput" />
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Fund Assets Under Management (USD)</mat-label>
-    <mat-select required>
+    <mat-select required [(ngModel)]="fundInput">
       <mat-option value="none">none</mat-option>
       <mat-option value="none">$0-5m</mat-option>
       <mat-option value="none">$5-10m</mat-option>
@@ -601,5 +601,6 @@
       <mat-option value="none">$50-100m</mat-option>
     </mat-select>
   </mat-form-field>
-  <button mat-raised-button color="primary">next</button>
+
+  <button mat-raised-button color="primary" (click)="Validar()">next</button>
 </mat-card>

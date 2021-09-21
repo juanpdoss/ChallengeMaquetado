@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { LogoComponent } from './pages/logo/logo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, SignUpComponent, HeaderComponent, LogoComponent],
@@ -23,6 +24,7 @@ import { LogoComponent } from './pages/logo/logo.component';
     MatChipsModule,
     MatCardModule,
     MatButtonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
