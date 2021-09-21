@@ -10,9 +10,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { LogoComponent } from './pages/logo/logo.component';
 
 @NgModule({
-  declarations: [AppComponent, SignUpComponent, HeaderComponent],
+  declarations: [AppComponent, SignUpComponent, HeaderComponent, LogoComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
