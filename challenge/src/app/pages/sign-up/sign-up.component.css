@@ -19,3 +19,7 @@ mat-form-field {
 hr {
   width: 100%;
 }
+
+div {
+  color: red;
+}

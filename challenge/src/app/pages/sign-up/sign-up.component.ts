@@ -6,22 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
+  countryOfIncorporation = '';
   placeOfBusiness: string = '';
   fundInput: string = '';
   binding: string = '';
-  errorMsg: string;
+  errorMsg: string = '';
+  legalEntityName = '';
   businessDescInput: string = '';
 
-  constructor() {
-    this.errorMsg = 'Complete this field.';
-  }
+  constructor() {}
 
   ngOnInit(): void {}
-
-  Validar() {
-    
-
-
-
-  }
 }

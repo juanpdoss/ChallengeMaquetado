@@ -5,16 +5,18 @@
   <br />
   <br />
 
+  <mat-label>Legal Entity name</mat-label>
   <mat-form-field appearance="fill">
-    <mat-label>Legal Entity name</mat-label>
-    <input matInput required />
+    <input matInput required [(ngModel)]="legalEntityName" #name="ngModel" />
+    <div *ngIf="name.errors?.required && (name.dirty || name.touched)">
+      Complete this field.
+    </div>
   </mat-form-field>
 
+  <mat-label>Country of Incorporation</mat-label>
   <mat-form-field appearance="fill">
-    <mat-label>Country of Incorporation</mat-label>
-    <mat-select required>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
+    <mat-select required [(ngModel)]="countryOfIncorporation" #name="ngModel">
+      <mat-option value="none">none</mat-option>
       <mat-option value="Afganistan">Afghanistan</mat-option>
       <mat-option value="Albania">Albania</mat-option>
       <mat-option value="Algeria">Algeria</mat-option>
@@ -275,11 +277,14 @@
       <mat-option value="Zambia">Zambia</mat-option>
       <mat-option value="Zimbabwe">Zimbabwe</mat-option>
     </mat-select>
+    <div *ngIf="name.errors?.required && (name.dirty || name.touched)">
+      Complete this field.
+    </div>
   </mat-form-field>
 
+  <mat-label>Other Business Name (optional)</mat-label>
   <mat-form-field appearance="fill">
-    <mat-label>Other Business Name (optional)</mat-label>
-    <textarea matInput required></textarea>
+    <textarea matInput required [(ngModel)]="binding"></textarea>
   </mat-form-field>
 
   <h2>Place of Business Operations</h2>
@@ -292,7 +297,6 @@
   </p>
   <br />
   <mat-form-field appearance="fill">
-    <mat-label>none</mat-label>
     <mat-select required>
       <mat-option value="none">none</mat-option>
       <mat-option value="Afganistan">Afghanistan</mat-option>
@@ -557,8 +561,8 @@
     </mat-select>
   </mat-form-field>
 
+  <mat-label>Type of Business</mat-label>
   <mat-form-field appearance="fill">
-    <mat-label>Type of Business</mat-label>
     <mat-select required>
       <mat-option value="none">none</mat-option>
       <mat-option value="cryptoAdvisory">Crypto advisory</mat-option>
@@ -569,8 +573,8 @@
     </mat-select>
   </mat-form-field>
 
+  <mat-label>Global Number of Employees</mat-label>
   <mat-form-field appearance="fill">
-    <mat-label>Global Number of Employees</mat-label>
     <mat-select required>
       <mat-option value="1 - 10">1 - 10</mat-option>
       <mat-option value="11 - 50">11 - 50</mat-option>
@@ -580,19 +584,32 @@
     </mat-select>
   </mat-form-field>
 
+  <mat-label>Company Website (optional)</mat-label>
   <mat-form-field appearance="fill">
-    <mat-label>Company Website (optional)</mat-label>
     <input matInput placeholder="https://www." required />
   </mat-form-field>
 
   <h2>*Business Description</h2>
+  <mat-label>Please describe your business </mat-label>
   <mat-form-field appearance="fill">
-    <mat-label>Please describe your business </mat-label>
-    <input matInput required [(ngModel)]="businessDescInput" />
+    <input
+      matInput
+      required
+      [(ngModel)]="this.businessDescInput"
+      #Description="ngModel"
+    />
+    <div
+      *ngIf="
+        Description.errors?.required &&
+        (Description.dirty || Description.touched)
+      "
+    >
+      Complete this field.
+    </div>
   </mat-form-field>
 
+  <mat-label>Fund Assets Under Management (USD)</mat-label>
   <mat-form-field appearance="fill">
-    <mat-label>Fund Assets Under Management (USD)</mat-label>
     <mat-select required [(ngModel)]="fundInput">
       <mat-option value="none">none</mat-option>
       <mat-option value="none">$0-5m</mat-option>
@@ -602,5 +619,5 @@
     </mat-select>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="Validar()">next</button>
+  <button mat-raised-button color="primary">next</button>
 </mat-card>
