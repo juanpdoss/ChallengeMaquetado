@@ -288,17 +288,7 @@
 
   <mat-label>Other Business Name (optional)</mat-label>
   <mat-form-field appearance="outline">
-    <textarea
-      matInput
-      required
-      [(ngModel)]="otherBusinessName"
-      #business="ngModel"
-    ></textarea>
-    <div
-      *ngIf="business.errors?.required && (business.dirty || business.touched)"
-    >
-      Complete this field.
-    </div>
+    <textarea matInput></textarea>
   </mat-form-field>
 
   <h2>Place of Business Operations</h2>
@@ -581,7 +571,7 @@
   </mat-form-field>
 
   <mat-label>Type of Business</mat-label>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-select required [(ngModel)]="typeOfbusiness" #typeBusiness="ngModel">
       <mat-option value="none">none</mat-option>
       <mat-option value="cryptoAdvisory">Crypto advisory</mat-option>
@@ -601,7 +591,7 @@
   </mat-form-field>
 
   <mat-label>Global Number of Employees</mat-label>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-select required [(ngModel)]="numberEmployees" #Employees="ngModel">
       <mat-option value="1 - 10">1 - 10</mat-option>
       <mat-option value="11 - 50">11 - 50</mat-option>
@@ -620,13 +610,13 @@
   </mat-form-field>
 
   <mat-label>Company Website (optional)</mat-label>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <input matInput placeholder="https://www." required />
   </mat-form-field>
 
   <h2>*Business Description</h2>
   <mat-label>Please describe your business in 100 to 500 characters </mat-label>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <input
       matInput
       required
@@ -644,5 +634,5 @@
     </div>
   </mat-form-field>
 
-  <button mat-raised-button color="primary">next</button>
+  <button mat-raised-button color="primary">NEXT</button>
 </mat-card>
