@@ -20,6 +20,11 @@ hr {
   width: 100%;
 }
 
-div {
-  color: red;
+h2 {
+  font-weight: 700;
+}
+
+mat-label {
+  font-size: 0.9rem;
+  font-weight: 550;
 }

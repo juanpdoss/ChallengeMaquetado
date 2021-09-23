@@ -14,6 +14,7 @@ export class SignUpComponent implements OnInit {
   numberEmployees: string = '';
   typeOfbusiness: string = '';
   placeOfBusinessOperation: string = '';
+  bool: boolean = true;
 
   constructor() {}
 

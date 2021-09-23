@@ -5,16 +5,16 @@
   <br />
   <br />
 
-  <mat-label>Legal Entity name</mat-label>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
+    <mat-label>Legal Entity name</mat-label>
     <input matInput required [(ngModel)]="legalEntityName" #name="ngModel" />
-    <div *ngIf="name.errors?.required && (name.dirty || name.touched)">
+    <mat-error *ngIf="name.errors?.required && (name.dirty || name.touched)">
       Complete this field.
-    </div>
+    </mat-error>
   </mat-form-field>
 
-  <mat-label>Country of Incorporation</mat-label>
-  <mat-form-field appearance="fill">
+  <mat-label align="end">Country of Incorporation</mat-label>
+  <mat-form-field appearance="outline">
     <mat-select
       required
       [(ngModel)]="countryOfIncorporation"
@@ -287,7 +287,7 @@
   </mat-form-field>
 
   <mat-label>Other Business Name (optional)</mat-label>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <textarea
       matInput
       required
@@ -310,7 +310,7 @@
     We use this to offer you a representative in your timezone.
   </p>
   <br />
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-select
       required
       [(ngModel)]="placeOfBusinessOperation"
@@ -577,14 +577,7 @@
       <mat-option value="Zambia">Zambia</mat-option>
       <mat-option value="Zimbabwe">Zimbabwe</mat-option>
     </mat-select>
-    <div
-      *ngIf="
-        placeOfOperation.errors?.required &&
-        (placeOfOperation.dirty || placeOfOperation.touched)
-      "
-    >
-      Complete this field.
-    </div>
+    <div *ngIf="bool">Complete this field.</div>
   </mat-form-field>
 
   <mat-label>Type of Business</mat-label>
@@ -647,20 +640,6 @@
         (Description.dirty || Description.touched)
       "
     >
-      Complete this field.
-    </div>
-  </mat-form-field>
-
-  <mat-label>Fund Assets Under Management (USD)</mat-label>
-  <mat-form-field appearance="fill">
-    <mat-select required [(ngModel)]="fundInput" #fund="ngModel">
-      <mat-option value="none">none</mat-option>
-      <mat-option value="none">$0-5m</mat-option>
-      <mat-option value="none">$5-10m</mat-option>
-      <mat-option value="none">$10-50m</mat-option>
-      <mat-option value="none">$50-100m</mat-option>
-    </mat-select>
-    <div *ngIf="fund.errors?.required && (fund.dirty || fund.touched)">
       Complete this field.
     </div>
   </mat-form-field>
